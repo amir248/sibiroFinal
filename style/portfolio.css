@@ -1,0 +1,97 @@
+@font-face {
+  font-family: light;
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: normal;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+:root {
+  --green: #406950;
+  --yello: #f4ce14;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button {
+  outline: none;
+  border: 0;
+}
+.portfolio--content {
+  width: 100%;
+  padding: 3rem 7rem;
+  gap: 1rem;
+}
+.portfolio--content > p > a {
+  color: #000;
+  font-weight: 900;
+}
+.portfolio--content > p {
+  padding-bottom: 1rem;
+}
+.portfolio--content > h3 {
+  font-size: 18px;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+.library--area {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image--library {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.line img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.line > a {
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+}
+.line > a::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--green);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+.line:hover > a::after {
+  width: 100%;
+}
+.welcome--msg {
+  padding: 8rem 13rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.welcome--msg > h1,
+.welcome--msg > p {
+  text-align: center;
+  font-weight: 100 !important;
+  line-height: 1.3rem;
+}
